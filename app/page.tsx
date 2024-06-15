@@ -5,6 +5,12 @@ import styles from '@/app/ui/home.module.css';
 import { lusitana } from './ui/fonts';
 import Image from 'next/image';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Welcome to DashNext',
+};
+
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6">
@@ -17,11 +23,11 @@ export default function Page() {
           className={styles.shape}
         />
           <p className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-            <strong>Welcome to Acme.</strong> This is the example for the{' '}
+            <strong>Welcome to DashNext.</strong> A simple{' '}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
-              Next.js Learn Course
+              Next.js
             </a>
-            , brought to you by Vercel.
+            {' '}Dashboard.
           </p>
           <Link
             href="/login"
